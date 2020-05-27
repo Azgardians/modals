@@ -66,24 +66,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items:center ;
-    margin: 20% auto;
+    margin: 10% auto;
     padding: 20px;
     background-color: #004c4c;
     box-shadow: 0 20px 50px rgba(0, 0 , 0 , 0.8);
     z-index: 4;
-    transition: 0.5s ease-in;
+    animation: modal1Open;
+    animation-duration: 1s;
 }
-.box1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.box2{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
+
 .submodal1 button {
     cursor: pointer;
     border: 2px solid black;
@@ -103,11 +94,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items:center ;
-    margin: 20% auto;
+    margin: 10% auto;
     padding: 30px;
     background-color: #004c4c;
     z-index: -1;
     box-shadow: 0 20px 50px rgba(0, 0 , 0 , 0.8);
+    animation: modal1Open;
+    animation-duration: 1s;
 }
 .slider {
     width: 300px;
@@ -239,5 +232,22 @@ input {
         
     }
 }
-	
 
+@keyframes modal1Open {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes modal2Open {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media screen and (max-width:430px){
+    .submodal1 {
+        padding: 50px;
+    }
+    .submodal2 {
+        padding: 50px;
+    }
+}
