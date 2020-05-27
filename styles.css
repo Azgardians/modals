@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata' , monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./background_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.5em;
+}
+#modalBtn {
+    position: absolute;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: black;
+    top: 60%;
+    left: 2%;
+    animation: pulse 1.5s infinite;
+}
+#modalBtn .fa-bell{
+    color:#d94b58;
+}
+.closeBtn{
+    font-size: 30px;
+    align-self: flex-end;
+}
+.closeBtn:hover,.closeBtn:focus {
+    color:#d94b58;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal1{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgba(0 , 0 , 0 , 0.5);
+    display: none;
+}
+.modal2{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgba(0 , 0 , 0 , 0.5);
+    display: none;
+}
+.submodal1{
+    position: fixed;
+    left: 30%;
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    margin: 20% auto;
+    padding: 20px;
+    background-color: #004c4c;
+    box-shadow: 0 20px 50px rgba(0, 0 , 0 , 0.8);
+    z-index: 4;
+    transition: 0.5s ease-in;
+}
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.submodal1 button {
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15%;
+    background: #d94b58;
+}
+.submodal1 button:hover {
+    background: black;
+    color: aqua;
+}
+.submodal2 {
+    position: fixed;
+    left: 30%;
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    margin: 20% auto;
+    padding: 30px;
+    background-color: #004c4c;
+    z-index: -1;
+    box-shadow: 0 20px 50px rgba(0, 0 , 0 , 0.8);
+}
+.slider {
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.slides::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.slider > a {
+    display: inline-flex;
+    background: black;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: #03e9f4;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+.slider > a:active {
+    top: 1px;
+}
+.slider > a:focus {
+    background: #000;
+}
+
+.input {
+	position:relative;
+	font-size: 0.5em;
+	background:linear-gradient(21deg, #10abff, #1beabd);
+	padding: 3px;
+	display: inline-block;
+	border-radius: 9999em;
+}
+.input :not(span){
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 0 .325em;
+    z-index: 1;
+    }
+.input :focus + span {
+    opacity: 1;
+    transform: scale(1);
+    }
+	
+.input span {
+    transform: scale(.993, .94);
+    transition: transform .5s, opacity .25s;
+    opacity: 0;
+    
+    position:absolute;
+    z-index: 0;
+    margin:4px; 
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 3px #fff,
+        0 0 0 4px #fff,
+        3px -3px 30px #1beabd, 
+        -3px 3px 30px #10abff;
+}
+
+input {
+	font-family: inherit;
+	line-height:inherit;
+	color:#2e3750;
+	min-width:10em;
+}
+
+::placeholder {
+	color:#333;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform:scale(0.97);
+        box-shadow: 0 0 0 0 rgba(154, 31, 64, 1);
+    }
+    70%{
+        transform:scale(1);
+        box-shadow: 0 0 0 20px rgba(154, 31, 64, 0);
+    }
+    100%{
+        transform:scale(0.97);
+        
+    }
+}
+	
+

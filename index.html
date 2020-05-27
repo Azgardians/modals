@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c4be078159.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Modal Classes</title>
+</head>
+<body>
+    <div id="container">
+       <a href="#" id="modalBtn"><i class="fas fa-bell fa-4x"></i></a>
+    </div>
+    
+    <div id="simple-model-1" class="modal1">
+        <div class="submodal1">
+            <span class="closeBtn">&times;</span>
+            <h1>Recieve live updates</h1>
+            <div class="slider">    
+                <a href="#slide-1">Phone</a>
+                <a href="#slide-2">Email</a>
+
+                <div class="slides">
+                    <div id="slide-1">
+                        <p>
+                            <span class="input">
+                                <input type="text" placeholder="Phone">
+                                <span></span>	
+                            </span>
+                        </p>
+                    </div>
+                    <div id="slide-2">
+                        <p>
+                            <span class="input">
+                                <input type="text" placeholder="Email">
+                                <span></span>	
+                            </span>
+                        </p>
+                    </div>
+                
+                </div>
+            </div>
+            <button id="next">Submit</button>
+        </div>
+    </div>
+    <div id ="simple-model-2" class="modal2">
+        <div class="submodal2">
+            <span class="closeBtn">&times;</span>
+            <h1>ThankYou for your intrest</h1>
+            <p>You will recieve the regular updates</p>
+        </div>
+    </div>
+        
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
